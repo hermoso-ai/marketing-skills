@@ -1,0 +1,12 @@
+{
+  "name": "marketing-skills",
+  "owner": { "name": "Hermoso", "email": "hello@hermoso.ai", "url": "https://hermoso.ai" },
+  "metadata": { "description": "Standalone marketing skills for AI agents: ads, copy, research, analysis and platform specs." },
+  "plugins": [
+    {
+      "name": "marketing-skills",
+      "source": "./",
+      "description": "Seven standalone marketing skills: ad hooks, UGC ad scripts, ad copy frameworks, ad-library research, competitor teardowns, campaign analysis and social media specs. No account needed."
+    }
+  ]
+}
