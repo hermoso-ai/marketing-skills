@@ -1,6 +1,6 @@
 {
   "name": "marketing-skills",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Seven standalone marketing skills for AI agents: ad hooks, UGC ad scripts, ad copy frameworks with platform field lengths, free ad-library research, competitor ad teardowns, paid campaign analysis and social media specs. No account or API key needed.",
   "author": { "name": "Hermoso", "email": "hello@hermoso.ai", "url": "https://hermoso.ai" },
   "homepage": "https://github.com/hermoso-ai/marketing-skills",

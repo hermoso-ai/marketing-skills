@@ -16,6 +16,10 @@ for (const name of names) {
   const m = /^---\n([\s\S]*?)\n---\n/.exec(text);
   if (!m) { errors.push(`${name}: no YAML frontmatter`); continue; }
   const fm = Object.fromEntries(m[1].split('\n').filter((l) => /^[a-z-]+:/.test(l)).map((l) => [l.slice(0, l.indexOf(':')), l.slice(l.indexOf(':') + 1).trim()]));
+  for (const [k, v] of Object.entries(fm)) {
+    // A plain (unquoted) YAML scalar may not contain ": " or " #"; strict parsers reject the file and agents skip the skill.
+    if (!/^["']/.test(v) && (/: /.test(v) || / #/.test(v))) errors.push(`${name}: frontmatter ${k} has an unquoted ": " or " #", which is invalid YAML (quote it or reword it)`);
+  }
   if (fm.name !== name) errors.push(`${name}: frontmatter name "${fm.name}" does not match the folder`);
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(fm.name || '') || fm.name.length > 64) errors.push(`${name}: invalid name`);
   if (!fm.description) errors.push(`${name}: missing description`);

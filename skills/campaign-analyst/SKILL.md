@@ -1,6 +1,6 @@
 ---
 name: campaign-analyst
-description: Read a paid-ads account like an analyst: turn 14 days of campaign results into what to scale, what to pause, what to fix and what to test next, with a data floor that refuses a verdict on too little delivery.
+description: Read a paid-ads account like an analyst. Turn 14 days of campaign results into what to scale, what to pause, what to fix and what to test next, with a data floor that refuses a verdict on too little delivery.
 license: MIT
 ---
 
