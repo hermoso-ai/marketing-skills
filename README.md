@@ -1,4 +1,4 @@
-# Marketing skills for AI agents
+# Marketing skills for AI agents: ad copy, UGC scripts, ad library research and campaign analysis
 
 [![Validate skills](https://github.com/hermoso-ai/marketing-skills/actions/workflows/validate.yml/badge.svg)](https://github.com/hermoso-ai/marketing-skills/actions/workflows/validate.yml)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
@@ -11,6 +11,8 @@ every size and character limit right.
 **Every skill works on its own.** No account, no API key, no product to install. They are plain Markdown methods your
 agent loads when the task matches.
 
+## What each skill does
+
 | Skill | What your agent can do with it |
 |---|---|
 | [`ad-hooks`](skills/ad-hooks/SKILL.md) | Write the first two seconds of an ad with 17 named hook mechanics, and pick the right one for a product |
@@ -21,7 +23,7 @@ agent loads when the task matches.
 | [`campaign-analyst`](skills/campaign-analyst/SKILL.md) | Turn 14 days of campaign results into scale, pause, fix and test-next, with a data floor that refuses a verdict on too little data |
 | [`social-media-specs`](skills/social-media-specs/SKILL.md) | Caption limits counted the way each platform counts, image and video sizes per placement, safe zones on vertical video |
 
-## Install
+## Install in Claude Code, Cursor, Codex, Claude.ai or ChatGPT
 
 **Any agent, with the open skills CLI** ([skills.sh](https://skills.sh)):
 
@@ -45,7 +47,24 @@ clawhub install ad-teardown
 **By hand**: copy any folder from [`skills/`](skills) into your agent's skills directory (for Claude Code,
 `~/.claude/skills/` or `.claude/skills/` in a project). Each folder is one `SKILL.md`.
 
-## Try it
+**Cursor:**
+
+```bash
+npx skills add hermoso-ai/marketing-skills -a cursor
+```
+
+**Codex CLI** (it reads the same plugin marketplace file):
+
+```bash
+codex plugin marketplace add hermoso-ai/marketing-skills && codex plugin add marketing-skills@marketing-skills
+```
+
+**Claude.ai:** zip one folder from [`skills/`](skills) and upload it in the Skills section of your settings.
+
+**ChatGPT, or any chat app without skills:** each skill is plain Markdown, so paste a `SKILL.md` into the
+conversation or into a project's instructions and ask your question.
+
+## Examples
 
 Once installed, ask in plain words. The agent picks the skill from its description:
 
